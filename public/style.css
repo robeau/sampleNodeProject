@@ -1,9 +1,16 @@
-p {
-  color: red;
+body {
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 800px) {
-  p {
-    color: blue;
-  }
+ul {
+  list-style: none;
+  border: 1px solid #E8E8E8;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid #E8E8E8;
+  padding: 0
 }
