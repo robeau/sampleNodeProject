@@ -4,6 +4,7 @@ const port = process.env.PORT || 8081;
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const url = '';
 
@@ -52,8 +53,7 @@ app.post('/add', function(req, res) {
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
   getAllPeople(function(people) {
-    //console.log('get', people);
-    res.send(people);
+    res.sendFile(path.resolve(__dirname, 'public/index.html'));
   });
 });
 
