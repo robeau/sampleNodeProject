@@ -10,6 +10,7 @@ const url = '';
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(express.static('public'));
 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
@@ -49,6 +50,13 @@ app.post('/add', function(req, res) {
   addPerson(person);
   res.send('Added!');
 });
+
+app.get('/read', function (req, res) {
+    getAllPeople(function(people) {
+     //console.log('get', people);
+     res.send(people);
+   });
+ });
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
