@@ -13,7 +13,7 @@ $ npm install
 
 Add a mongo URI to line 9 of index.js.
 ```
-const url = 'mongodb://<username>:<password>@<database>.mlab.com:37882/demo';
+const url = 'mongodb://<username>:<password>@<database>.mlab.com:<port>/demo';
 ```
 
 Start the server.
