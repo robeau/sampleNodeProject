@@ -1,7 +1,7 @@
 ## Sample Node Application
 
 #### Running the app locally
-In the terminal, go into your project folder and clone the repo. Replace <fork> with the name of fork.
+In the terminal, go into your project folder and clone the repo. Replace \<fork\> with the name of fork.
 ```
 $ git clone https://github.com/<fork>/sampleNodeProject
 ```
